@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/first-ecomm-site/static/css/main.736cc48f.chunk.css",
+    "main.js": "/first-ecomm-site/static/js/main.e2f35d9a.chunk.js",
+    "main.js.map": "/first-ecomm-site/static/js/main.e2f35d9a.chunk.js.map",
+    "runtime-main.js": "/first-ecomm-site/static/js/runtime-main.becf7315.js",
+    "runtime-main.js.map": "/first-ecomm-site/static/js/runtime-main.becf7315.js.map",
+    "static/js/2.92ed311a.chunk.js": "/first-ecomm-site/static/js/2.92ed311a.chunk.js",
+    "static/js/2.92ed311a.chunk.js.map": "/first-ecomm-site/static/js/2.92ed311a.chunk.js.map",
+    "index.html": "/first-ecomm-site/index.html",
+    "static/css/main.736cc48f.chunk.css.map": "/first-ecomm-site/static/css/main.736cc48f.chunk.css.map",
+    "static/js/2.92ed311a.chunk.js.LICENSE.txt": "/first-ecomm-site/static/js/2.92ed311a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.becf7315.js",
+    "static/js/2.92ed311a.chunk.js",
+    "static/css/main.736cc48f.chunk.css",
+    "static/js/main.e2f35d9a.chunk.js"
+  ]
+}
