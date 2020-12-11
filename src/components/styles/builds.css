@@ -34,16 +34,53 @@
 
 /*                     build card                      */
 .buildCardContainer {
-    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 18rem;
+    height: 22rem;
     margin-bottom: 4rem;
     border: 1px solid gray;
     border-radius: 4px;
-    padding: .25rem 1rem .5rem 1rem ;
+    padding: .25rem 1rem .5rem 1rem;
+    box-shadow: 0 1px 4px 0 gray;
 }
 .buildCardContainer > h2 {
-    text-align: center;
     font-weight: bold;
-    letter-spacing: 1.5px;
-    font-size: 16px;
-
+    border-bottom: 1px solid gray;
+    width: 113%;
+    text-align: center;
+    padding: .25rem 0 .35rem 0;
+    letter-spacing: 1px;
+}
+.buildCardContainer > img {
+    width: 10rem;
+    height: auto;
+    object-fit: contain;
+}
+.buildCardContainer > p {
+    color: gray;
+    letter-spacing: .5px;
+}
+.buildCardContainer > div {
+    font-weight: bold;
+}
+.btnContainer {
+    display: block;
+    padding-bottom: .75rem;
+}
+.btnContainer > button {
+    width: 7rem;
+    margin-left: .5rem;
+    height: 1.75rem;
+    background-color: rgb(58, 90, 149);
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    box-shadow: 0 1px 1px 0 cornflowerblue;
+    color: white;
+}
+.btnContainer > button:hover {
+    cursor: pointer;
+    border: 1px solid black;
 }

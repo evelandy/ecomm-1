@@ -1,0 +1,57 @@
+/*                   Add item from featured builds                     */
+.addItemContainer {
+    height: 21rem;
+    width: 25rem;
+    position: absolute;
+    background-color: white;
+    left: 37%;
+    top: 32rem;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 1px 7px 0 gray;
+}
+.addItemContainer > span {
+    font-weight: bold;
+    position: absolute;
+    right: .5rem;
+    top: .35rem;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0 5.5px;
+    box-shadow: 0 1px 3px 0 gray;
+}
+.addItemContainer > span:hover {
+    cursor: pointer;
+}
+.addItemContainer > h2 {
+    font-weight: bold;
+    font-size: 21px;
+    color: gray;
+    letter-spacing: 1px;
+}
+.addItemContainer > h3 {
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+.addItemContainer > img {
+    height: 8rem;
+    width: auto;
+    object-fit: contain;
+}
+.addItemPrice {
+    font-weight: bold;
+    letter-spacing: .75px;
+}
+.addItemForm {
+    margin-bottom: 1rem;
+}
+.addItemForm > select {
+    height: 22px;
+    width: 40px;
+    margin-right: 5px;
+}
