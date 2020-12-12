@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/first-ecomm-site/static/css/main.b2ed0b12.chunk.css",
-    "main.js": "/first-ecomm-site/static/js/main.cd458688.chunk.js",
-    "main.js.map": "/first-ecomm-site/static/js/main.cd458688.chunk.js.map",
+    "main.css": "/first-ecomm-site/static/css/main.141af43e.chunk.css",
+    "main.js": "/first-ecomm-site/static/js/main.d1101f71.chunk.js",
+    "main.js.map": "/first-ecomm-site/static/js/main.d1101f71.chunk.js.map",
     "runtime-main.js": "/first-ecomm-site/static/js/runtime-main.becf7315.js",
     "runtime-main.js.map": "/first-ecomm-site/static/js/runtime-main.becf7315.js.map",
-    "static/js/2.e0efac53.chunk.js": "/first-ecomm-site/static/js/2.e0efac53.chunk.js",
-    "static/js/2.e0efac53.chunk.js.map": "/first-ecomm-site/static/js/2.e0efac53.chunk.js.map",
+    "static/js/2.944f06a4.chunk.js": "/first-ecomm-site/static/js/2.944f06a4.chunk.js",
+    "static/js/2.944f06a4.chunk.js.map": "/first-ecomm-site/static/js/2.944f06a4.chunk.js.map",
     "index.html": "/first-ecomm-site/index.html",
-    "static/css/main.b2ed0b12.chunk.css.map": "/first-ecomm-site/static/css/main.b2ed0b12.chunk.css.map",
-    "static/js/2.e0efac53.chunk.js.LICENSE.txt": "/first-ecomm-site/static/js/2.e0efac53.chunk.js.LICENSE.txt",
+    "static/css/main.141af43e.chunk.css.map": "/first-ecomm-site/static/css/main.141af43e.chunk.css.map",
+    "static/js/2.944f06a4.chunk.js.LICENSE.txt": "/first-ecomm-site/static/js/2.944f06a4.chunk.js.LICENSE.txt",
+    "static/media/amdCPU.ceed10f1.jpg": "/first-ecomm-site/static/media/amdCPU.ceed10f1.jpg",
+    "static/media/aorus.281bf905.jpg": "/first-ecomm-site/static/media/aorus.281bf905.jpg",
     "static/media/buildAndMonitor.2757f640.jpg": "/first-ecomm-site/static/media/buildAndMonitor.2757f640.jpg",
-    "static/media/gamingBuild.a80a749c.jpg": "/first-ecomm-site/static/media/gamingBuild.a80a749c.jpg"
+    "static/media/gamingBuild.a80a749c.jpg": "/first-ecomm-site/static/media/gamingBuild.a80a749c.jpg",
+    "static/media/intelCPU.6b8a2dec.jpg": "/first-ecomm-site/static/media/intelCPU.6b8a2dec.jpg",
+    "static/media/ssd.92f2215c.jpg": "/first-ecomm-site/static/media/ssd.92f2215c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.becf7315.js",
-    "static/js/2.e0efac53.chunk.js",
-    "static/css/main.b2ed0b12.chunk.css",
-    "static/js/main.cd458688.chunk.js"
+    "static/js/2.944f06a4.chunk.js",
+    "static/css/main.141af43e.chunk.css",
+    "static/js/main.d1101f71.chunk.js"
   ]
 }
