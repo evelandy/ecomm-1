@@ -3,14 +3,28 @@ import '../styles/modal.css';
 
 export default class AddItem extends React.Component {
     state = {
-        value: '1'
+        value: '1',
+        itemId: null,
+        itemName: null,
+        itemDescription: null,
+        itemPrice: null
     }
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state.value)
+        console.log(this.props.price)
+        console.log(this.props.name)
+        console.log(this.props.type_desc)
+        console.log(this.props.itemId)
     }
     handleChange = (e) => {
         this.setState({value: e.target.value})
+    }
+    addToCart = (itemId) => {
+        // fetch('http://127.0.0.1:5000/api/v1/cart', {
+        //     method: 'POST'
+        // })
+        alert(itemId)
     }
     render() {
         return (

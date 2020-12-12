@@ -15,30 +15,30 @@ export default function FeaturedBuilds() {
             </div>
             <span className="featuredBuildCardContainer">
                 <BuildCard 
-                    quality={"Good"} 
-                    type_desc={"Complete Build"} 
-                    price={"399.99"}
+                    name={"Basic Build"} 
+                    type_desc={"Basic business class build"} 
+                    price={"299.99"}
                     id={"0001"}
                     build={basicBuild}
                 />
                 <BuildCard 
-                    quality={"Better"} 
-                    type_desc={"Complete Gaming Build"} 
-                    price={"499.99"} 
+                    name={"Custom Build"} 
+                    type_desc={"Custom gaming build"} 
+                    price={"599.99"} 
                     id={"0002"}
                     build={gamingBuild}
                 />
                 <BuildCard 
-                    quality={"Best"} 
-                    type_desc={"Complete Gaming Build & Monitor"} 
-                    price={"599.99"} 
+                    name={"Custom Build With Monitor"} 
+                    type_desc={"Custom gaming build & monitor"} 
+                    price={"799.99"} 
                     id={"0003"}
                     build={buildAndMonitor}
                 />
                 <BuildCard 
-                    quality={"Ultimate"} 
-                    type_desc={"Complete Gaming Build + Extras"} 
-                    price={"799.99"} 
+                    name={"Custom Build With Extras"} 
+                    type_desc={"Custom gaming build + monitor & extras"} 
+                    price={"999.99"} 
                     id={"0004"}
                     build={build}
                 />

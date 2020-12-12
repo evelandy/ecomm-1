@@ -4,7 +4,9 @@ import '../styles/navbar.css';
 export default function Toolbar() {
     return (
         <div className="toolbarContainer">
-            <span className="has-text-white-bis	toolbarName">PcBuilds.com</span>
+            <span className="has-text-white-bis	toolbarName">
+                PcBuilds.com
+            </span>
             <span className="is-flex">
                 <input className="input toolbarInput" type="text"></input>
                 <button className="button is-link">Search</button>

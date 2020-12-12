@@ -1,4 +1,3 @@
-##from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask, request, make_response, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
@@ -36,6 +35,30 @@ class Cart(db.Model):
 ##    user_id = db.Column(db.Integer)
 
 
+class BuildInv(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    item_id = db.Column(db.Integer)
+    item_name = db.Column(db.String(80))
+    item_description = db.Column(db.String(120))
+    item_price = db.Column(db.Integer)
+
+
+class PartInv(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    item_id = db.Column(db.Integer)
+    item_name = db.Column(db.String(80))
+    item_description = db.Column(db.String(120))
+    item_price = db.Column(db.Integer)
+
+
+class ServiceInv(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    item_id = db.Column(db.Integer)
+    item_name = db.Column(db.String(80))
+    item_description = db.Column(db.String(120))
+    item_price = db.Column(db.Integer)
+
+
 @app.route('/api/v1/check', methods=['GET'])
 def server_check():
     return jsonify({'message': 'up and running'}), 200
@@ -52,6 +75,7 @@ def view_cart():
             cart_data = {}
             cart_data['id'] = item.id
             cart_data['item_id'] = item.item_id
+            cart_data['item_name'] = item.item_name
             cart_data['item_description'] = item.item_description
             cart_data['item_price'] = item.item_price
             cart_data['quantity'] = item.quantity
@@ -62,7 +86,8 @@ def view_cart():
 @app.route('/api/v1/cart', methods=['POST'])
 def add_cart():
     data = request.get_json()
-    add_item = Cart(item_id=data['item_id'], item_name=data['item_name'], item_description=data['item_description'], item_price=data['item_price'], quantity=data['quantity'])
+    add_item = Cart(item_id=data['item_id'], item_name=data['item_name'], item_description=data['item_description'],
+                    item_price=data['item_price'], quantity=data['quantity'])
     db.session.add(add_item)
     db.session.commit()
     return jsonify({'message': 'item added'}), 201

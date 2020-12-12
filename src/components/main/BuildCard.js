@@ -22,7 +22,7 @@ export default function BuildCard(props) {
             <AddItem close={handleClose} type_desc={props.type_desc} price={props.price} src={props.build} show={showModal} />
             <div className="buildCardContainer">
                 <h2>
-                    {props.quality}
+                    {props.name}
                 </h2>
                 <p>
                     {props.type_desc}
