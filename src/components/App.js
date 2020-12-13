@@ -7,7 +7,6 @@ import Banner from './header/Banner';
 import NavContainer from './header/NavContainer';
 import FeaturedBuilds from './main/FeaturedBuilds';
 import FeaturedParts from './main/FeaturedParts';
-import AddProducts from './main/AddProducts';
 
 export default function App() {
     return (
@@ -20,7 +19,6 @@ export default function App() {
                 <div>
                     <FeaturedBuilds />
                     <FeaturedParts />
-                    <AddProducts />
                 </div>
             </div>
         </Router>

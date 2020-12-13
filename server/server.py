@@ -93,5 +93,32 @@ def add_cart():
     return jsonify({'message': 'item added'}), 201
 
 
+@app.route('/api/v1/addProduct', methods=['POST'])
+def addProducts():
+    data = request.get_json()
+    svc = data['addItem']['checkVal']
+    if svc == 'BuildInv':
+        newAdd = BuildInv(item_id=data['addItem']['itemId'], item_name=data['addItem']['itemName'],
+                                         item_description=data['addItem']['itemDescription'],
+                                             item_price=data['addItem']['itemPrice'])
+        db.session.add(newAdd)
+        db.session.commit()
+    elif svc == 'PartInv':
+        newAdd = PartInv(item_id=data['addItem']['itemId'], item_name=data['addItem']['itemName'],
+                                             item_description=data['addItem']['itemDescription'],
+                                             item_price=data['addItem']['itemPrice'])
+        db.session.add(newAdd)
+        db.session.commit()
+    elif svc == 'ServiceInv':
+        newAdd = ServiceInv(item_id=data['addItem']['itemId'], item_name=data['addItem']['itemName'],
+                                             item_description=data['addItem']['itemDescription'],
+                                             item_price=data['addItem']['itemPrice'])
+        db.session.add(newAdd)
+        db.session.commit()
+    else:
+        return jsonify({'msg': 'no go'})
+    return jsonify({'msg': 'good'}), 201
+
+
 if __name__ == "__main__":
     app.run(debug=True)

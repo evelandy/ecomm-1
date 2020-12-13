@@ -9,7 +9,7 @@ export default function PartCard(props) {
     }
     return (
         <div>
-            <AddItem name={props.name} itemId={props.id} close={handleClose} type_desc={props.type_desc} price={props.price} src={props.build} show={showModal} />
+            <AddItem close={handleClose} name={props.name} itemId={props.id} type_desc={props.type_desc} price={props.price} src={props.build} show={showModal} />
             <div className="partsCardContainer">
                 <h2>
                     {props.name}

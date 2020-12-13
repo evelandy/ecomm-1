@@ -13,10 +13,28 @@ export default class AddProducts extends React.Component {
     }
     submitHandler = (e) => {
         e.preventDefault();
-        // fetch(`http://127.0.0.1:5000/api/v1/addProduct/${this.state.checkVal}`, {
-        //     method: 'POST',
-        //     body: JSON.stringify({"item": test})
-        // })
+        let addItem = {
+            'itemId': this.state.itemId, 
+            'itemName': this.state.itemName, 
+            'itemDescription': this.state.itemDescription, 
+            'itemPrice': this.state.itemPrice, 
+            'checkVal': this.state.checkVal
+        }
+        fetch(`http://127.0.0.1:5000/api/v1/addProduct`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({addItem})
+        })
+        .then((res) => {
+            let data = res.json();
+            return data;
+        })
+        .then((data) => {
+            console.log(data.msg)
+        })
     }
     render() {
         return (
@@ -24,9 +42,10 @@ export default class AddProducts extends React.Component {
                 <form onSubmit={this.submitHandler}>
                     <h2>Add Item</h2>
                     <select defaultValue={this.state.value} onChange={this.handleChange}>
-                        <option value='build'>build</option>
-                        <option value='part'>part</option>
-                        <option value='service'>service</option>
+                        <option value=""></option>
+                        <option value='BuildInv'>BuildInv</option>
+                        <option value='PartInv'>PartInv</option>
+                        <option value='ServiceInv'>ServiceInv</option>
                     </select>
                     <label>
                         Item Id:

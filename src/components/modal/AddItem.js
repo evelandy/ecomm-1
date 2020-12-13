@@ -4,10 +4,10 @@ import '../styles/modal.css';
 export default class AddItem extends React.Component {
     state = {
         value: '1',
-        itemId: null,
-        itemName: null,
-        itemDescription: null,
-        itemPrice: null
+        itemId: '',
+        itemName: '',
+        itemDescription: '',
+        itemPrice: ''
     }
     handleSubmit = (e) => {
         e.preventDefault();
@@ -20,11 +20,14 @@ export default class AddItem extends React.Component {
     handleChange = (e) => {
         this.setState({value: e.target.value})
     }
-    addToCart = (itemId) => {
-        // fetch('http://127.0.0.1:5000/api/v1/cart', {
-        //     method: 'POST'
-        // })
-        alert(itemId)
+    addToCart = () => {
+        fetch('http://127.0.0.1:5000/api/v1/cart', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+        })
     }
     render() {
         return (
@@ -35,6 +38,10 @@ export default class AddItem extends React.Component {
                 <div className="addItemContainer">
                     <span onClick={this.props.close}>X</span>
                     <h2>Add Item</h2>
+
+                    <h3>{this.props.name}</h3>
+                    <h4>{this.props.itemId}</h4>
+                    
                     <h3>{this.props.type_desc}</h3>
                     <img src={this.props.src} alt="build" />
                     <div className="addItemPrice">
