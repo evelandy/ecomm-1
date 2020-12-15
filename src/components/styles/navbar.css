@@ -26,6 +26,14 @@
     border: none;
     color: white;
 }
+.signInCartDropdown {
+    position: relative;
+    right: 50px;
+}
+.cartDropdown {
+    position: relative;
+    right: 150px;
+}
 
 /*                      navbar                          */
 .navbarNav {

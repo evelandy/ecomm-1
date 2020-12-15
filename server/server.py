@@ -86,11 +86,33 @@ def view_cart():
 @app.route('/api/v1/cart', methods=['POST'])
 def add_cart():
     data = request.get_json()
-    add_item = Cart(item_id=data['item_id'], item_name=data['item_name'], item_description=data['item_description'],
-                    item_price=data['item_price'], quantity=data['quantity'])
-    db.session.add(add_item)
-    db.session.commit()
-    return jsonify({'message': 'item added'}), 201
+    cart = Cart.query.all()
+    if not cart:
+        add_item = Cart(item_id=data['addCart']['itemId'], item_name=data['addCart']['itemName'],
+                        item_description=data['addCart']['itemDescription'], item_price=data['addCart']['itemPrice'],
+                        quantity=data['addCart']['amount'])
+        db.session.add(add_item)
+        db.session.commit()
+        message = "{} - {} added @(${})\nTotal: ${}"\
+            .format(data['addCart']['amount'], data['addCart']['itemName'], data['addCart']['itemPrice'],
+                    (float(data['addCart']['amount']) * float(data['addCart']['itemPrice'])))
+        return jsonify({'message': message}), 201
+    else:
+        conn = sqlite3.connect('data.db')
+        sql = "DELETE FROM Cart"
+        cur = conn.cursor()
+        cur.execute(sql)
+        conn.commit()
+
+        add_item = Cart(item_id=data['addCart']['itemId'], item_name=data['addCart']['itemName'],
+                        item_description=data['addCart']['itemDescription'], item_price=data['addCart']['itemPrice'],
+                        quantity=data['addCart']['amount'])
+        db.session.add(add_item)
+        db.session.commit()
+        message = "{} - {} added @(${})\nTotal: ${}" \
+            .format(data['addCart']['amount'], data['addCart']['itemName'], data['addCart']['itemPrice'],
+                    (float(data['addCart']['amount']) * float(data['addCart']['itemPrice'])))
+        return jsonify({'message': message}), 201
 
 
 @app.route('/api/v1/addProduct', methods=['POST'])

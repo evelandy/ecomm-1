@@ -1,4 +1,5 @@
 import React from 'react';
+import CartMiniModal from '../cart/CartMiniModal';
 import '../styles/navbar.css';
 
 export default function Toolbar() {
@@ -19,7 +20,7 @@ export default function Toolbar() {
                             <i className="fas fa-angle-down" aria-hidden="true"></i>
                         </button>
                         <span className="dropdown-menu" id="dropdown-menu4" role="menu">
-                            <span className="dropdown-content">
+                            <span className="dropdown-content signInCartDropdown">
                                 <p>orders</p>
                                 <p>Sign In</p>
                                 <p>new? Sign up here</p>
@@ -34,10 +35,11 @@ export default function Toolbar() {
                             <i className="fas fa-angle-down" aria-hidden="true"></i>
                         </button>
                         <span className="dropdown-menu" id="dropdown-menu4" role="menu">
-                            <span className="dropdown-content">
-                                <p>Modal</p>
+                            <span className="dropdown-content cartDropdown">
+                                <CartMiniModal />
+                                {/* <p>Modal</p>
                                 <p>with shopping</p>
-                                <p>cart</p>
+                                <p>cart</p> */}
                             </span>
                         </span>
                     </span>

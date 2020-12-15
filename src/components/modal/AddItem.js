@@ -20,13 +20,33 @@ export default class AddItem extends React.Component {
     handleChange = (e) => {
         this.setState({value: e.target.value})
     }
-    addToCart = () => {
+    refreshPage = () => {
+        window.location.reload(false)
+    }
+    addToCart = (e) => {
+        e.preventDefault();
+        let addCart = {
+            'itemId': this.props.itemId, 
+            'itemName': this.props.name, 
+            'itemDescription': this.props.type_desc, 
+            'itemPrice': this.props.price,
+            'amount': this.state.value
+        }
         fetch('http://127.0.0.1:5000/api/v1/cart', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
                 'Content-Type': 'application/json'
             },
+            body: JSON.stringify({addCart})
+        })
+        .then((res) => {
+            let data = res.json();
+            return data;
+        })
+        .then((data) => {
+            alert(data.message)
+            this.refreshPage()
         })
     }
     render() {
@@ -47,7 +67,7 @@ export default class AddItem extends React.Component {
                     <div className="addItemPrice">
                         ${this.props.price}
                     </div>
-                    <form className="addItemForm" onSubmit={this.handleSubmit}>
+                    <form className="addItemForm" onSubmit={this.addToCart}>
                         <select defaultValue={this.state.value} onChange={this.handleChange}>
                             <option value='1'>1</option>
                             <option value='2'>2</option>
